@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@color/background_material_light">
+
+	<TextView
+		android:layout_width="270dip"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:text="You must pair Kraken Exchange with kraken.com"
+		android:id="@+id/fragment_account_block_textView"
+		android:layout_alignParentTop="true"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="56dp"/>
+
+	<Button
+		android:layout_width="150dip"
+		android:layout_height="wrap_content"
+		android:text="API Setup"
+		android:id="@+id/fragment_account_block_button_goto_api"
+		android:layout_centerVertical="true"
+		android:layout_centerHorizontal="true"
+		android:background="@drawable/api_setup_scan_button"
+		android:textColor="@color/kraken_white"/>
+</RelativeLayout>

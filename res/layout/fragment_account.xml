@@ -1,0 +1,120 @@
+<android.support.v4.widget.SwipeRefreshLayout
+	android:id="@+id/swipe_container_account"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:fillViewport="true">
+
+		<FrameLayout
+			xmlns:android="http://schemas.android.com/apk/res/android"
+			xmlns:tools="http://schemas.android.com/tools"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:focusable="true"
+			tools:context=".FragmentAccount"
+			>
+
+
+			<RelativeLayout
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_marginBottom="12dip"
+				android:layout_marginLeft="12dip"
+				android:layout_marginRight="12dip"
+				android:layout_marginTop="12dip"
+				android:elevation="1dip"
+				android:id="@+id/fragment_account_layout_container">
+
+				<RelativeLayout
+					android:layout_width="fill_parent"
+					android:layout_height="60dip"
+					android:layout_alignParentTop="true"
+					android:background="@android:color/background_light"
+					android:id="@+id/fragment_account_layout_top">
+
+					<TextView
+						android:id="@+id/fragment_account_title"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_centerInParent="true"
+						android:text="@string/fragment_account_title"
+						android:textSize="30sp"/>
+
+				</RelativeLayout>
+
+				<RelativeLayout
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:background="@android:color/background_light"
+					android:layout_below="@id/fragment_account_layout_top"
+					android:id="@+id/fragment_account_layout_mid"
+					android:minHeight="150dip"
+					>
+
+					<TableLayout
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:id="@+id/fragment_account_balances_table"
+						android:minHeight="150dip"
+						android:stretchColumns="0,1"
+						android:layout_marginLeft="12dip"
+						android:layout_marginRight="12dip">
+
+
+					</TableLayout>
+
+				</RelativeLayout>
+
+				<RelativeLayout
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent"
+					android:background="@android:color/background_light"
+					android:layout_below="@id/fragment_account_layout_mid"
+					android:id="@+id/fragment_account_layout_bottom">
+
+					<TableLayout
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:stretchColumns="0,1">
+
+						<TableRow
+							android:layout_width="fill_parent"
+							android:layout_height="fill_parent"
+							android:weightSum="1"
+							android:minHeight="60dip"
+							android:background="@color/kraken_blue"
+							>
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="@string/fragment_account_totalbalance_label"
+								android:id="@+id/fragment_account_totalbalance_label"
+								android:layout_weight="0.5"
+								android:layout_gravity="center_vertical"
+								android:paddingLeft="12dip"
+								android:textSize="22sp"
+								android:textColor="@color/kraken_white"/>
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="fill_parent"
+								android:id="@+id/fragment_account_totalbalance_value"
+								android:layout_weight="0.5"
+								android:gravity="center_vertical|right"
+								android:paddingRight="12dip"
+								android:textSize="20sp"/>
+						</TableRow>
+					</TableLayout>
+				</RelativeLayout>
+
+			</RelativeLayout>
+
+		</FrameLayout>
+	</ScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>

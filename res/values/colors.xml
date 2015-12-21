@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="kraken_blue">#2085B8</color>
+	<color name="kraken_blue_dark">#ff1d7aa9</color>
+	<color name="kraken_white">#ffffff</color>
+	<color name="kraken_red">#ffff0000</color>
+	<color name="kraken_red_dark">#ffda0000</color>
+	<color name="kraken_green">#ff00ff00</color>
+	<color name="order_closed">#ffb2ff9c</color>
+	<color name="order_canceled">#ffff836e</color>
+	<color name="navdrawer_bg">#ffaaaaaa</color>
+</resources>

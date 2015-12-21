@@ -1,0 +1,222 @@
+<android.support.v4.widget.SwipeRefreshLayout
+	android:id="@+id/swipe_container_trading"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:fillViewport="true">
+
+		<FrameLayout
+			android:id="@+id/trading_frame_layout"
+			xmlns:android="http://schemas.android.com/apk/res/android"
+			xmlns:tools="http://schemas.android.com/tools"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:focusable="true"
+			tools:context=".FragmentTrading">
+
+			<RelativeLayout
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_marginBottom="12dip"
+				android:layout_marginLeft="12dip"
+				android:layout_marginRight="12dip"
+				android:layout_marginTop="12dip"
+				android:elevation="1dip">
+
+				<RelativeLayout
+					android:id="@+id/trading_header"
+					android:layout_width="fill_parent"
+					android:layout_height="60dip"
+					android:layout_alignParentTop="true"
+					android:background="@android:color/background_light">
+
+					<TextView
+						android:id="@+id/trading_title"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_centerInParent="true"
+						android:paddingLeft="5dip"
+						android:text="Open Orders"
+						android:textSize="30sp"/>
+
+				</RelativeLayout>
+
+				<RelativeLayout
+					android:id="@+id/trading_body"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_below="@+id/trading_header"
+					android:background="@android:color/background_light">
+
+					<!-- Open Orders table's body -->
+					<TableLayout
+						android:id="@+id/trading_openorders_table_content"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:stretchColumns="0,1,2,3,4,5">
+
+						<TableRow
+							android:id="@+id/test_row"
+							android:layout_width="fill_parent"
+							android:layout_height="fill_parent"
+							android:weightSum="1"
+							>
+
+							<TextView
+								android:id="@+id/heading_row_typetest"
+								android:layout_width="30dip"
+								android:layout_height="30dip"
+								android:layout_weight="0.2"
+								android:gravity="center_vertical"
+								android:paddingLeft="5dip"
+								android:textColor="@android:color/black"
+								android:textSize="18dp"/>
+
+							<TextView
+								android:id="@+id/heading_row_pairtest"
+								android:layout_width="fill_parent"
+								android:layout_height="30dip"
+								android:layout_weight="0.2"
+								android:gravity="center_vertical"
+								android:paddingRight="5dip"
+								android:textColor="@android:color/black"
+								android:textSize="18dp"/>
+
+							<TextView
+								android:id="@+id/heading_row_pricetest"
+								android:layout_width="fill_parent"
+								android:layout_height="30dip"
+								android:layout_gravity="left"
+								android:layout_weight="0.2"
+								android:gravity="center_vertical"
+								android:paddingRight="5dip"
+								android:textColor="@android:color/black"
+								android:textSize="18dp"/>
+
+							<TextView
+								android:id="@+id/heading_row_volumetest"
+								android:layout_width="fill_parent"
+								android:layout_height="30dip"
+								android:layout_gravity="left"
+								android:layout_weight="0.2"
+								android:gravity="center_vertical"
+								android:paddingRight="5dip"
+								android:textColor="@android:color/black"
+								android:textSize="18dp"/>
+
+							<TextView
+								android:id="@+id/heading_row_actiontest"
+								android:layout_width="fill_parent"
+								android:layout_height="30dip"
+								android:layout_gravity="right"
+								android:layout_weight="0.2"
+								android:gravity="center_vertical|right"
+								android:paddingRight="5dip"
+								android:textColor="@android:color/black"
+								android:textSize="18dp"/>
+						</TableRow>
+					</TableLayout>
+
+
+				</RelativeLayout>
+
+				<RelativeLayout
+					android:id="@+id/trading_header_closedorders"
+					android:layout_width="fill_parent"
+					android:layout_height="60dip"
+					android:layout_below="@+id/trading_body"
+					android:background="@android:color/background_light"
+					>
+
+					<TextView
+						android:id="@+id/trading_title_closedorders"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_centerInParent="true"
+						android:paddingLeft="5dip"
+						android:text="Closed Orders"
+						android:textSize="30sp"/>
+
+				</RelativeLayout>
+
+				<RelativeLayout
+					android:id="@+id/trading_body_closedorders"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_below="@+id/trading_header_closedorders"
+					android:background="@android:color/background_light">
+
+					<TableLayout
+						android:id="@+id/trading_closedorders_table_content"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						>
+
+						<TableRow
+							android:id="@+id/test_row_closedorders"
+							android:layout_width="fill_parent"
+							android:layout_height="fill_parent"
+							android:weightSum="1"
+							>
+
+							<TextView
+								android:id="@+id/heading_row_typetest_closedorders"
+								android:layout_width="fill_parent"
+								android:layout_height="30dip"
+								android:layout_weight="0.2"
+								android:gravity="center_vertical|left"
+								android:paddingLeft="5dip"
+								android:textColor="@android:color/black"
+								android:textSize="18dp"/>
+
+							<TextView
+								android:id="@+id/heading_row_pairtest_closedorders"
+								android:layout_width="fill_parent"
+								android:layout_height="30dip"
+								android:layout_weight="0.2"
+								android:gravity="center_vertical|right"
+								android:paddingRight="5dip"
+								android:textColor="@android:color/black"
+								android:textSize="18dp"/>
+
+							<TextView
+								android:id="@+id/heading_row_pricetest_closedorders"
+								android:layout_width="fill_parent"
+								android:layout_height="30dip"
+								android:layout_weight="0.2"
+								android:gravity="center_vertical|right"
+								android:paddingRight="5dip"
+								android:textColor="@android:color/black"
+								android:textSize="18dp"/>
+
+							<TextView
+								android:id="@+id/heading_row_volumetest_closedorders"
+								android:layout_width="fill_parent"
+								android:layout_height="30dip"
+								android:layout_weight="0.2"
+								android:gravity="center_vertical|right"
+								android:paddingRight="5dip"
+								android:textColor="@android:color/black"
+								android:textSize="18dp"/>
+
+							<TextView
+								android:id="@+id/heading_row_actiontest_closedorders"
+								android:layout_width="fill_parent"
+								android:layout_height="30dip"
+								android:layout_weight="0.2"
+								android:gravity="center_vertical|right"
+								android:paddingRight="5dip"
+								android:textColor="@android:color/black"
+								android:textSize="18dp"/>
+						</TableRow>
+					</TableLayout>
+				</RelativeLayout>
+			</RelativeLayout>
+
+		</FrameLayout>
+	</ScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>

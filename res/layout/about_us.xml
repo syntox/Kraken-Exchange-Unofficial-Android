@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:layout_width="wrap_content"
+			  android:layout_height="wrap_content"
+			 android:clickable="false">
+
+	<ImageView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/imageView"
+		android:layout_gravity="center"
+		android:src="@drawable/about_us_background"
+		android:adjustViewBounds="true"
+		android:layout_alignParentLeft="true"
+		android:layout_marginLeft="0dp"
+		android:layout_alignParentTop="true"
+		android:layout_marginTop="0dp"/>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="250dip"
+		android:layout_centerVertical="true"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentStart="true"
+		android:id="@+id/relativeLayout">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:text="Please, consider donating to the developer. It will ensure the project continuation."
+			android:id="@+id/textView"
+			android:layout_alignParentTop="true"
+			android:layout_marginTop="50dp"
+			android:textColor="@android:color/white"
+			android:layout_marginRight="40dip"
+			android:layout_marginLeft="40dip"/>
+
+		<Button
+			android:layout_width="55dip"
+			android:layout_height="55dip"
+			android:id="@+id/buttonBTC"
+			android:background="@drawable/donate_button"
+			android:clickable="true"
+			android:onClick="donate"
+			android:layout_below="@+id/textView"
+			android:layout_centerHorizontal="true"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="12SL6nwWqs7JZG4BhZETNm29xnfPoZdJfF"
+			android:id="@+id/btcaddress"
+			android:textColor="#ffffffff"
+			android:textSize="15sp"
+			android:background="#6c000000"
+			android:selectAllOnFocus="false"
+			android:textIsSelectable="true"
+			android:layout_below="@+id/buttonBTC"
+			android:layout_alignStart="@+id/textView"
+			android:layout_marginTop="50dip"
+			android:layout_marginRight="5dip"/>
+	</RelativeLayout>
+
+</RelativeLayout>

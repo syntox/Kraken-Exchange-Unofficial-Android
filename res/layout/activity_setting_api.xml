@@ -1,0 +1,218 @@
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:fillViewport="true">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			tools:context=".SettingsApi">
+
+			<RelativeLayout
+				android:id="@+id/api_setup_header_container"
+				android:layout_width="fill_parent"
+				android:layout_height="100dip"
+				android:layout_alignParentTop="true"
+				android:background="@color/background_material_light">
+
+				<TextView
+					android:id="@+id/api_setup_activity_title"
+					android:layout_width="290dip"
+					android:layout_height="70dip"
+					android:layout_centerInParent="true"
+					android:text="@string/api_settings_message"
+					android:textColor="@android:color/black"
+					android:textSize="18sp"/>
+			</RelativeLayout>
+
+			<RelativeLayout
+				android:id="@+id/api_setup_mid_container"
+				android:layout_width="fill_parent"
+				android:layout_height="175dip"
+				android:layout_below="@id/api_setup_header_container"
+				android:background="@color/kraken_white">
+
+				<TableLayout
+					android:id="@+id/api_setup_action_button_table_layout"
+					android:layout_width="fill_parent"
+					android:layout_height="60dip"
+					android:stretchColumns="0">
+
+					<TableRow
+						android:layout_width="fill_parent"
+						android:layout_height="fill_parent"
+						android:minHeight="60dip"
+						android:weightSum="1">
+
+						<Button
+							android:id="@+id/api_setup_acion_scan"
+							android:layout_width="wrap_content"
+							android:layout_height="40dip"
+							android:layout_gravity="center_vertical"
+							android:layout_marginLeft="15dip"
+							android:layout_marginRight="15dip"
+							android:layout_weight="1"
+							android:background="@drawable/api_setup_scan_button"
+							android:clickable="true"
+							android:onClick="scanApi"
+							android:text="@string/api_settings_button_scan_api"
+							android:textAllCaps="false"
+							android:textColor="@color/kraken_white"
+							android:textSize="18sp"/>
+					</TableRow>
+
+				</TableLayout>
+
+				<TableLayout
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent"
+					android:layout_below="@id/api_setup_action_button_table_layout"
+					>
+
+					<TableRow
+						android:layout_width="fill_parent"
+						android:layout_height="fill_parent"
+						android:minHeight="50dip"
+						android:weightSum="1"
+						>
+
+						<TextView
+							android:id="@+id/textView2"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_gravity="center_vertical"
+							android:layout_marginLeft="15dip"
+							android:layout_weight="0.1"
+							android:text="API Key"
+							android:textColor="@color/primary_text_default_material_light"
+							android:textSize="18sp"/>
+
+						<EditText
+							android:id="@+id/api_setup_content_key"
+							android:layout_width="wrap_content"
+							android:layout_height="30dip"
+							android:layout_gravity="center_vertical"
+							android:layout_marginRight="15dip"
+							android:layout_weight="0.9"
+							android:background="@android:color/darker_gray"
+							android:editable="true"
+							android:focusable="true"
+							android:focusableInTouchMode="true"
+							android:minHeight="30dip"
+							android:textColor="@android:color/black"
+							android:maxLines="1"
+							android:lines="1"
+							android:scrollHorizontally="true"
+							android:minLines="1"
+							android:inputType="text"/>
+					</TableRow>
+
+					<TableRow
+						android:layout_width="fill_parent"
+						android:layout_height="fill_parent"
+						android:minHeight="50dip"
+						android:weightSum="1">
+
+						<TextView
+							android:id="@+id/textView3"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_gravity="center_vertical"
+							android:layout_marginLeft="15dip"
+							android:layout_weight="0.1"
+							android:text="Secret"
+							android:textColor="@color/primary_text_default_material_light"
+							android:textSize="18sp"/>
+
+						<EditText
+							android:id="@+id/api_setup_content_secret"
+							android:layout_width="wrap_content"
+							android:layout_height="30dip"
+							android:layout_gravity="center_vertical"
+							android:layout_marginRight="15dip"
+							android:layout_weight="0.9"
+							android:background="@android:color/darker_gray"
+							android:editable="true"
+							android:focusable="true"
+							android:focusableInTouchMode="true"
+							android:minHeight="30dip"
+							android:textColor="@android:color/black"
+							android:minLines="1"
+							android:maxLines="1"
+							android:lines="1"
+							android:inputType="text"/>
+					</TableRow>
+				</TableLayout>
+			</RelativeLayout>
+
+			<RelativeLayout
+				android:id="@+id/api_setup_footer_container"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_below="@id/api_setup_mid_container"
+				android:background="@color/background_material_light">
+
+
+				<TableLayout
+					android:layout_width="fill_parent"
+					android:layout_height="120dip"
+					android:minHeight="60dip"
+					android:stretchColumns="0">
+
+					<TableRow
+						android:layout_width="fill_parent"
+						android:layout_height="fill_parent"
+						android:minHeight="60dip"
+						android:weightSum="1">
+
+						<Button
+							android:id="@+id/api_setup_acion_save"
+							android:layout_width="wrap_content"
+							android:layout_height="40dip"
+							android:layout_gravity="center_vertical"
+							android:layout_marginLeft="15dip"
+							android:layout_marginRight="15dip"
+							android:layout_weight="1"
+							android:background="@drawable/api_setup_scan_button"
+							android:clickable="true"
+							android:onClick="saveApi"
+							android:text="Save"
+							android:textAllCaps="false"
+							android:textColor="@color/kraken_white"
+							android:textSize="18sp"/>
+					</TableRow>
+
+					<TableRow
+						android:layout_width="fill_parent"
+						android:layout_height="fill_parent"
+						android:minHeight="60dip"
+						android:weightSum="1">
+
+						<Button
+							android:id="@+id/api_setup_acion_reset"
+							android:layout_width="wrap_content"
+							android:layout_height="40dip"
+							android:layout_gravity="center_vertical"
+							android:layout_marginLeft="15dip"
+							android:layout_marginRight="15dip"
+							android:layout_weight="1"
+							android:background="@drawable/api_setup_clear_button"
+							android:clickable="true"
+							android:onClick="resetApi"
+							android:text="Reset"
+							android:textAllCaps="false"
+							android:textColor="@color/kraken_white"
+							android:textSize="18sp"/>
+					</TableRow>
+				</TableLayout>
+			</RelativeLayout>
+		</RelativeLayout>
+	</ScrollView>
+</RelativeLayout>
+

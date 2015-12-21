@@ -1,0 +1,43 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	  xmlns:app="http://schemas.android.com/apk/res-auto"
+	  xmlns:tools="http://schemas.android.com/tools"
+	  tools:context=".MainActivity">
+
+	<item android:id="@+id/action_settings"
+		  android:title="@string/action_settings"
+		  android:orderInCategory="100"
+		  app:showAsAction="never"/>
+
+	<item android:id="@+id/action_select_pair"
+		  android:title="@string/select_currency_pair"
+		  android:visible="false"
+		  app:showAsAction="always" >
+		<menu>
+			<item
+				android:id="@+id/currency_btceur"
+				android:title="BTC/EUR" />
+			<item
+				android:id="@+id/currency_btcusd"
+				android:title="BTC/USD" />
+		</menu>
+	</item>
+
+	<item android:id="@+id/action_select_currency"
+		  android:title="@string/select_currency"
+		  android:visible="false"
+		  app:showAsAction="always" >
+		<menu>
+			<item
+				android:id="@+id/currency_eur"
+				android:title="@string/currency_eur" />
+			<item
+				android:id="@+id/currency_usd"
+				android:title="@string/currency_usd" />
+		</menu>
+	</item>
+
+	<item android:id="@+id/action_pair_api"
+		  android:title="@string/action_pair_api"
+		  android:icon="@drawable/ic_action_accounts"
+		  app:showAsAction="ifRoom" />
+</menu>

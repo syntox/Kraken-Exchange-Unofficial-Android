@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent">
+
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="60dip"
+		android:layout_alignParentTop="true"
+		android:id="@+id/activity_feedback_layout_top">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="From:"
+			android:id="@+id/textView5"
+			android:layout_centerVertical="true"
+			android:textSize="18sp"
+			android:layout_marginLeft="12dip"/>
+
+		<Spinner
+			android:layout_width="300dip"
+			android:layout_height="wrap_content"
+			android:id="@+id/activity_feedback_email_spinner"
+			android:layout_alignParentTop="false"
+			android:layout_centerHorizontal="true"
+			android:layout_alignParentRight="true"
+			android:layout_marginRight="12dip"/>
+
+	</RelativeLayout>
+
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/activity_feedback_layout_top"
+		android:id="@+id/activity_feedback_layout_mid">
+
+		<EditText
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/activity_feedback_message"
+			android:textColor="@android:color/black"
+			android:maxLines="4"
+			android:layout_margin="12dip"
+			android:hint="@string/feedback_message_placeholder"/>
+	</RelativeLayout>
+
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_below="@id/activity_feedback_layout_mid"
+		android:id="@+id/activity_feedback_layout_bottom">
+	</RelativeLayout>
+</RelativeLayout>
